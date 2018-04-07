@@ -26,34 +26,34 @@ body {
     }
 }
   
-.base,
-.big-bubble,
-.small-bubble,
-.second-base,
-.second-big-bubble,
-.second-small-bubble {
+.cloud {
+    animation: cloud-animation 10s infinite; 
+}
+
+.cloud__big-bubble,
+.cloud__small-bubble,
+.cloud__base,
+.second-cloud__big-bubble,
+.second-cloud__small-bubble,
+.second-cloud__base {
     background-color: white;
     position: absolute;
     border-radius: 50%;
 }
   
-.cloud {
-    animation: cloud-animation 10s infinite; 
-}
-  
-.big-bubble {
+.cloud__big-bubble {
     margin: .5rem 0 0 4.5rem;
     width: 9rem;
     height: 9rem;
 }
   
-.small-bubble {
+.cloud__small-bubble {
     margin: 3.5rem 0 0 11.5rem;
     width: 7rem;
     height: 7rem;
 }
   
-.base {
+.cloud__base {
     margin: 5.5rem 0 0 .5rem;
     border-radius: 20rem;
     width: 20rem;
@@ -64,19 +64,19 @@ body {
     animation: cloud-animation 4s infinite linear;
 }
   
-.second-big-bubble {
+.second-cloud__big-bubble {
     margin: 2.5rem 0 0 2rem;
     width: 4.5rem;
     height: 4.5rem;
 }
   
-.second-small-bubble {
+.second-cloud__small-bubble {
     margin: 3.5rem 0 0 5.5rem;
     width: 3.5rem;
     height: 3.5rem;
 }
   
-.second-base {
+.second-cloud__base {
     margin: 5.5rem 0 0 .5rem;
     border-radius: 20rem;
     width: 10rem;
@@ -88,12 +88,13 @@ body {
     position: absolute;
 }
   
-.cloud-slower {
+.cloud--slower {
     animation: cloud-animation 5s infinite;
 }
   
-.second-cloud-faster {
+.second-cloud--faster {
     animation: cloud-animation 7s infinite;
+    z-index: 1;
 }
   
 .container {
@@ -108,9 +109,10 @@ body {
     max-width: 60rem;
     height: auto;
     padding-bottom: .5rem;
+    z-index: 0;
 }
   
-h1 {
+.container__header {
     font-family: 'Pacifico', cursive;
     padding-top: 2rem;
     text-align: center;
@@ -123,7 +125,6 @@ h1 {
 .pressure,
 .wind {
     font-family: "Montserrat", sans-serif;
-    margin-top: 2.2rem;
     text-align: center;
     font-size: 1.7rem;
     color: #00FF7B;
@@ -142,10 +143,8 @@ h1 {
     align-items: center;
     justify-content: center;  
 }
-  
-.temperature,
-.pressure,
-.wind {
+
+.col-1-of-3 {
     margin-top: 2rem;
     margin-right: 5rem;
     margin-left: 5rem;
@@ -244,11 +243,14 @@ footer {
     color: red;
 }
 
+.col-1-of-3--small {
+    margin: 1rem;
+}
+
 .btn {
     height: 3.8rem;
     width: 4rem;
     background-color: #00FF7B;
-    margin: 1rem;
     box-shadow: 2px 2px #888888;
     border-radius: 3px;
     border: none;
