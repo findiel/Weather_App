@@ -27,7 +27,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
-  }
+}
   
 @keyframes cloud-animation {
     from {
@@ -124,7 +124,7 @@ body {
     z-index: 0; }
     @media (max-width: 21.875em) {
         .container {
-            width: 50rem; } }
+            width: 45rem; } }
   
 .container__header-primary {
     font-family: "Pacifico", cursive;
