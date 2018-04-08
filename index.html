@@ -36,35 +36,29 @@
             <div class="second-cloud__base"></div>
         </div>
         <div class="container">
-            <h1 class="container__header">Weather App</h1>
-            <div id="container__content">
-                <div class="location">Location
-                    <div class="position description"></div> 
+            <h1 class="container__header-primary">Weather App</h1>
+            <div class="container__header-secondary">Location</div>
+            <div class="container__position"></div> 
+            <div id="container__current-weather-img"></div>
+            <div class="container__conditions"></div>
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="container__header-secondary">Temp.</div>
+                    <div class="container__temperature-degrees"></div>
+                    <div class="container__circle" id="container__temperature-scale"></div>
                 </div>
-                <div id="current-weather-img"></div>
-                <div class="conditions description"></div>
-                <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="temperature">Temp.
-                            <div class="temperature-degrees description"></div>
-                        </div>
-                        <div class="circle temperature" id="temperature-scale"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="pressure">Pressure
-                            <div class="pressure-degrees description"></div>
-                        </div>
-                        <div class="circle pressure" id="pressure-scale"></div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="wind">Wind
-                            <div class="wind-speed description"></div>
-                        </div>
-                        <div class="circle wind" id="wind-scale"></div>
-                    </div>
+                <div class="col-1-of-3">
+                    <div class="container__header-secondary">Pressure</div>
+                    <div class="container__pressure-degrees"></div>
+                    <div class="container__circle" id="container__pressure-scale"></div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="container__header-secondary">Wind</div>
+                    <div class="container__wind-speed"></div>
+                    <div class="container__circle" id="container__wind-scale"></div>
                 </div>
             </div>
-            <button class="change-units-button">Change units</button>
+            <button class="container__units-button">Change units</button>
         </div>
         <footer>
             <p>coded with <span><i class="fa fa-heart"></i></span> by fjollsfinn</p>

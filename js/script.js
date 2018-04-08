@@ -10,7 +10,7 @@ $(document).ready(function() {
        
            //Api varible depended from position.
            var api = 'https://fcc-weather-api.glitch.me/api/current?lat=' + lat + '&' + 'lon=' + lon;
-           var newContent = '';
+           var newContent = "";
            
            //Getting JSON from api.
            $.getJSON (api, function (json) {
@@ -19,19 +19,19 @@ $(document).ready(function() {
                    newContent="";
                    for (var e = 0; e < 1; e++) {
                        for (var i = 0; i < counter; i++) {
-                           newContent += '<div class="piece">' + '</div>';
+                           newContent += '<div class="scale-piece">' + '</div>';
                         };
-                        newContent += '<div class="center-circle">' + '</div>';
+                        newContent += '<div class="container__center-circle">' + '</div>';
                     }
                 };
      
                 //Whole JSON content below
-                $(".position").html(json.name + ', ' + json.sys.country);
+                $(".container__position").html(json.name + ', ' + json.sys.country);
                 newContent += '<img src="' + json.weather[0].icon + '"'; //adding current weather conditions image.
                 newContent += ' alt="Current weather image"' + '/>'; //adding alt if img not loaded.
-                document.getElementById("current-weather-img").innerHTML= newContent;
-                $(".conditions").html(json.weather[0].description); //updating text weather description.
-                $(".temperature-degrees").html(json.main.temp + '<sup> o</sup>' + 'C'); //updating current temp.
+                document.getElementById("container__current-weather-img").innerHTML= newContent;
+                $(".container__conditions").html(json.weather[0].description); //updating text weather description.
+                $(".container__temperature-degrees").html(json.main.temp + '<sup> o</sup>' + 'C'); //updating current temp.
                 //Temperature scale.
                 if (json.main.temp) {
                     if (json.main.temp <= -7) {
@@ -51,9 +51,9 @@ $(document).ready(function() {
                     } else if (json.main.temp > 35) {
                         addPiece(8);
                     };
-                    document.getElementById("temperature-scale").innerHTML= newContent;
+                    document.getElementById("container__temperature-scale").innerHTML= newContent;
                 };
-                $(".pressure-degrees").html(json.main.pressure + ' hPa'); //Updating current pressure.
+                $(".container__pressure-degrees").html(json.main.pressure + ' hPa'); //Updating current pressure.
                 //Pressure scale.
                 if (json.main.pressure) {
                     if (json.main.pressure <= 950) {
@@ -73,9 +73,9 @@ $(document).ready(function() {
                     } else if (json.main.pressure > 1050) {
                         addPiece(8);
                     };
-                    document.getElementById("pressure-scale").innerHTML= newContent;
+                    document.getElementById("container__pressure-scale").innerHTML= newContent;
                 };
-                $(".wind-speed").html(json.wind.speed + ' m/s'); //updating current wind speed.
+                $(".container__wind-speed").html(json.wind.speed + ' m/s'); //updating current wind speed.
                 //Wind scale.
                 if (json.wind.speed) {
                     if (json.wind.speed <= 1.5) {
@@ -95,20 +95,20 @@ $(document).ready(function() {
                     } else if (json.wind.speed > 25) {
                         addPiece(8);
                     };
-                    document.getElementById("wind-scale").innerHTML= newContent;
+                    document.getElementById("container__wind-scale").innerHTML= newContent;
                 };
                 //Changing units.
                 var changer = true;
-                $(".change-units-button").click(function() {
+                $(".container__units-button").click(function() {
                     if (changer == true) {
-                        $(".temperature-degrees").html(json.main.temp * 9/5 + 32 + '<sup> o</sup>' + 'F');
-                        $(".pressure-degrees").html(json.main.pressure/1000 + ' bar');
-                        $(".wind-speed").html(Math.floor(json.wind.speed * 3.6) + ' km/h');
+                        $(".container__temperature-degrees").html(json.main.temp * 9/5 + 32 + '<sup> o</sup>' + 'F');
+                        $(".container__pressure-degrees").html(json.main.pressure/1000 + ' bar');
+                        $(".container__wind-speed").html(Math.floor(json.wind.speed * 3.6) + ' km/h');
                         changer = false;
                     } else if (changer == false) {
-                        $(".temperature-degrees").html(json.main.temp + '<sup> o</sup>' + 'C');
-                        $(".pressure-degrees").html(json.main.pressure + ' hPa');
-                        $(".wind-speed").html(json.wind.speed + ' m/s');
+                        $(".container__temperature-degrees").html(json.main.temp + '<sup> o</sup>' + 'C');
+                        $(".container__pressure-degrees").html(json.main.pressure + ' hPa');
+                        $(".container__wind-speed").html(json.wind.speed + ' m/s');
                         changer = true;
                     };
                 });

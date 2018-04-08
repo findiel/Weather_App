@@ -112,32 +112,33 @@ body {
     z-index: 0;
 }
   
-.container__header {
-    font-family: 'Pacifico', cursive;
+.container__header-primary {
+    font-family: "Pacifico", cursive;
     padding-top: 2rem;
     text-align: center;
     color: #00FF7B;
     font-size: 3.8rem;
 }
   
-.location,
-.temperature,
-.pressure,
-.wind {
+.container__header-secondary {
     font-family: "Montserrat", sans-serif;
     text-align: center;
     font-size: 1.7rem;
     color: #00FF7B;
 }
   
-.description {
+.container__position,
+.container__conditions,
+.container__temperature-degrees,
+.container__pressure-degrees,
+.container__wind-speed {
     font-family: "Montserrat", sans-serif;
     text-align: center ;
     font-size: 1.6rem; 
     color: #FFFFFF;
 }
   
-#current-weather-img,
+#container__current-weather-img,
 .row {
     display: flex;
     align-items: center;
@@ -150,7 +151,19 @@ body {
     margin-left: 5rem;
 }
   
-.center-circle {
+.container__circle {
+    margin-top: 1rem;
+    height: 10rem;
+    width: 10rem;
+    background: #1F2434;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid;
+    color: #00FF7B;
+}
+
+.container__center-circle {
     margin-top: 2.25rem;
     margin-left: 2.25rem;
     width: 5rem;
@@ -160,18 +173,8 @@ body {
     background-color: #1F2434;
     position: absolute;
 }
-  
-.circle {
-    margin-top: 1rem;
-    height: 10rem;
-    width: 10rem;
-    background: #1F2434;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    border: 3px solid;
-}
-.piece {
+
+.scale-piece {
     height: 0;
     width: 0;
     position: absolute;
@@ -181,31 +184,31 @@ body {
     border-top: 5rem solid transparent;
     transform-origin: bottom left;
 }
-.piece:nth-child(2) {
+.scale-piece:nth-child(2) {
     transform: rotate(45deg);
     border-right: 5rem solid #3debe6;
 }
-.piece:nth-child(3) {
+.scale-piece:nth-child(3) {
     transform: rotate(90deg);
     border-right: 5rem solid #03f35e;
 }
-.piece:nth-child(4) {
+.scale-piece:nth-child(4) {
     transform: rotate(135deg);
     border-right: 5rem solid #02e128;
 }
-.piece:nth-child(5) {
+.scale-piece:nth-child(5) {
     transform: rotate(180deg);
     border-right: 5rem solid #f7d515;
 }
-.piece:nth-child(6) {
+.scale-piece:nth-child(6) {
     transform: rotate(225deg);
     border-right: 5rem solid #fe7601;
 }
-.piece:nth-child(7) {
+.scale-piece:nth-child(7) {
     transform: rotate(270deg);
     border-right: 5rem solid #f30e05;
 }
-.piece:nth-child(8) {
+.scale-piece:nth-child(8) {
     transform: rotate(315deg);
     border-right: 5rem solid #a00903;
 }
@@ -218,7 +221,7 @@ button:hover {
     background-color: #4dffa3;
 }
   
-.change-units-button {
+.container__units-button {
     margin-top: 2rem;
     border-radius: 2rem;
     background-color: #00FF7B;
@@ -255,9 +258,4 @@ footer {
     border-radius: 3px;
     border: none;
 }
-  
-.btn:focus, .btn:active {
-    outline: none !important;
-    box-shadow: 2px 2px #888888 !important;
-  }
   
