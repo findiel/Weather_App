@@ -26,6 +26,10 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden !important;
+}
+
+#wrapper {
     overflow-x: hidden;
 }
   
