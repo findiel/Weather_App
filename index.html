@@ -12,67 +12,70 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
         <script src="js/script.js"></script>
     </head>
     <body>
-        <div class="cloud">
-            <div class="cloud__big-bubble"></div>
-            <div class="cloud__small-bubble"></div>
-            <div class="cloud__base"></div>
-        </div>
-        <div class="second-cloud">
-            <div class="second-cloud__big-bubble"></div>
-            <div class="second-cloud__small-bubble"></div>
-            <div class="second-cloud__base"></div>
-        </div>
-        <div class="cloud clouds-lower-position cloud--slower">
-            <div class="cloud__big-bubble"></div>
-            <div class="cloud__small-bubble"></div>
-            <div class="cloud__base"></div>
-        </div>
-        <div class="second-cloud clouds-lower-position second-cloud--faster">
-            <div class="second-cloud__big-bubble"></div>
-            <div class="second-cloud__small-bubble"></div>
-            <div class="second-cloud__base"></div>
-        </div>
-        <div class="container">
-            <h1 class="container__header-primary">Weather App</h1>
-            <div class="container__header-secondary">Location</div>
-            <div class="container__position"></div> 
-            <div id="container__current-weather-img"></div>
-            <div class="container__conditions"></div>
-            <div class="row">
-                <div class="col-1-of-3">
-                    <div class="container__header-secondary">Temp.</div>
-                    <div class="container__temperature-degrees"></div>
-                    <div class="container__circle" id="container__temperature-scale"></div>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="container__header-secondary">Pressure</div>
-                    <div class="container__pressure-degrees"></div>
-                    <div class="container__circle" id="container__pressure-scale"></div>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="container__header-secondary">Wind</div>
-                    <div class="container__wind-speed"></div>
-                    <div class="container__circle" id="container__wind-scale"></div>
-                </div>
+        <div id="wrapper">
+            <div class="cloud">
+                <div class="cloud__big-bubble"></div>
+                <div class="cloud__small-bubble"></div>
+                <div class="cloud__base"></div>
             </div>
-            <button class="container__units-button">Change units</button>
-        </div>
-        <footer>
-            <p>coded with <span><i class="fa fa-heart"></i></span> by fjollsfinn</p>
-            <div class="row">
-                <div class="col-1-of-3--small">
-                    <button class="btn codepen"><i class="fa fa-codepen"></i></button>
-                </div>
-                <div class="col-1-of-3--small">
-                    <button class="btn github"><i class="fa fa-github"></i></button>
-                </div>
-                <div class="col-1-of-3--small">
-                    <button class="btn facebook"><i class="fa fa-facebook"></i></button>
-                </div>
+            <div class="second-cloud">
+                <div class="second-cloud__big-bubble"></div>
+                <div class="second-cloud__small-bubble"></div>
+                <div class="second-cloud__base"></div>
             </div>
-        </footer>
+            <div class="cloud clouds-lower-position cloud--slower">
+                <div class="cloud__big-bubble"></div>
+                <div class="cloud__small-bubble"></div>
+                <div class="cloud__base"></div>
+            </div>
+            <div class="second-cloud clouds-lower-position second-cloud--faster">
+                <div class="second-cloud__big-bubble"></div>
+                <div class="second-cloud__small-bubble"></div>
+                <div class="second-cloud__base"></div>
+            </div>
+            <div class="container">
+                <h1 class="container__header-primary">Weather App</h1>
+                <div class="container__header-secondary">Location</div>
+                <div class="container__position"></div> 
+                <div id="container__current-weather-img"></div>
+                <div class="container__conditions"></div>
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="container__header-secondary">Temp.</div>
+                        <div class="container__temperature-degrees"></div>
+                        <div class="container__circle" id="container__temperature-scale"></div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="container__header-secondary">Pressure</div>
+                        <div class="container__pressure-degrees"></div>
+                        <div class="container__circle" id="container__pressure-scale"></div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="container__header-secondary">Wind</div>
+                        <div class="container__wind-speed"></div>
+                        <div class="container__circle" id="container__wind-scale"></div>
+                    </div>
+                </div>
+                <button class="container__units-button">Change units</button>
+            </div>
+            <footer>
+                <p>coded with <span><i class="fa fa-heart"></i></span> by fjollsfinn</p>
+                <div class="row">
+                    <div class="col-1-of-3--small">
+                        <button class="btn codepen"><i class="fa fa-codepen"></i></button>
+                    </div>
+                    <div class="col-1-of-3--small">
+                        <button class="btn github"><i class="fa fa-github"></i></button>
+                    </div>
+                    <div class="col-1-of-3--small">
+                        <button class="btn facebook"><i class="fa fa-facebook"></i></button>
+                    </div>
+                </div>
+            </footer>
+        </div>>
     </body>
 </html>
