@@ -46,8 +46,10 @@ body {
 }
   
 .cloud {
-    animation: cloud-animation 10s infinite; 
-}
+    animation: cloud-animation 10s infinite; }
+    @media (max-width: 28.125em) {
+        .cloud {
+            visibility: hidden; } }
 
 .cloud__big-bubble,
 .cloud__small-bubble,
@@ -108,7 +110,7 @@ body {
 }
   
 .cloud--slower {
-    animation: cloud-animation 5s infinite;
+    animation: cloud-animation 5s infinite ease-out;
 }
   
 .second-cloud--faster {
