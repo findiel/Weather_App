@@ -124,14 +124,16 @@ body {
     background: linear-gradient(to bottom right, #1F2434 40%, #57687C 180%);
     box-shadow: .5rem 1rem #888888;
     border-radius: 2rem;
-    width: auto;
     width: 60rem;
     height: auto;
     padding-bottom: .5rem;
     z-index: 0; }
+    @media (max-width: 28.125em) {
+        .container {
+            width: 50rem; } }
     @media (max-width: 21.875em) {
         .container {
-            width: 45rem; } }
+            width: 40rem; } }
   
 .container__header-primary {
     font-family: "Pacifico", cursive;
@@ -174,10 +176,14 @@ body {
         .col-1-of-3 {
             margin-right: 4rem;
             margin-left: 4rem; } }
+    @media (max-width: 28.125em) {
+        .col-1-of-3 {
+            margin-right: 2.5rem;
+            margin-left: 2.5rem; } }
     @media (max-width: 21.875em) {
         .col-1-of-3 {
-            margin-right: 3rem;
-            margin-left: 3rem; } }
+            margin-right: 1.5rem;
+            margin-left: 1.5rem; } }
 
   
 .container__circle {
