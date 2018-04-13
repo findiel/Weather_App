@@ -1,6 +1,6 @@
 # ABOUT
 Weather web application which shows local weather. Application uses geolocation and AJAX. <br />
-API LINK: https://fcc-weather-api.glitch.me/ <br />
+API INFO: https://fcc-weather-api.glitch.me/ <br />
 
 User Story: You can see the weather in yours current location. <br />
 User Story: You can see a different icon depending on the weather. <br />
