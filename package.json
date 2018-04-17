@@ -4,7 +4,7 @@
   "description": "Weather web application.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prefix:css": ""
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Fjollsfinn/Weather_App/issues"
   },
-  "homepage": "https://github.com/Fjollsfinn/Weather_App#readme"
+  "homepage": "https://github.com/Fjollsfinn/Weather_App#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.3.0"
+  }
 }
