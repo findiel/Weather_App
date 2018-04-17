@@ -4,7 +4,8 @@
   "description": "Weather web application.",
   "main": "index.js",
   "scripts": {
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.prefix.css"
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.min.css --out-style compressed"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/Fjollsfinn/Weather_App#readme",
   "devDependencies": {
     "autoprefixer": "^8.3.0",
-    "postcss-cli": "^5.0.0"
+    "postcss-cli": "^5.0.0",
+    "node-sass": "^4.8.3"
   }
 }
