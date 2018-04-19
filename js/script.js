@@ -6,7 +6,7 @@ $(document).ready(function() {
        navigator.geolocation.getCurrentPosition(function(position) {
            var lat = position.coords.latitude;
            var lon = position.coords.longitude;
-           console.log('latitude: ' + lat + ' longitude: ' + lon)
+           console.log('latitude: ' + lat + ' longitude: ' + lon);
        
            //Api varible depended from position.
            var api = 'https://fcc-weather-api.glitch.me/api/current?lat=' + lat + '&' + 'lon=' + lon;
@@ -20,10 +20,10 @@ $(document).ready(function() {
                    for (var e = 0; e < 1; e++) {
                        for (var i = 0; i < counter; i++) {
                            newContent += '<div class="scale-piece">' + '</div>';
-                        };
+                        }
                         newContent += '<div class="container__center-circle">' + '</div>';
                     }
-                };
+                }
      
                 //Whole JSON content below
                 $(".container__position").html(json.name + ', ' + json.sys.country);
@@ -50,9 +50,9 @@ $(document).ready(function() {
                         addPiece(7);
                     } else if (json.main.temp > 35) {
                         addPiece(8);
-                    };
+                    }
                     document.getElementById("container__temperature-scale").innerHTML= newContent;
-                };
+                }
                 $(".container__pressure-degrees").html(json.main.pressure + ' hPa'); //Updating current pressure.
                 //Pressure scale.
                 if (json.main.pressure) {
@@ -72,9 +72,9 @@ $(document).ready(function() {
                         addPiece(7);
                     } else if (json.main.pressure > 1050) {
                         addPiece(8);
-                    };
+                    }
                     document.getElementById("container__pressure-scale").innerHTML= newContent;
-                };
+                }
                 $(".container__wind-speed").html(json.wind.speed + ' m/s'); //updating current wind speed.
                 //Wind scale.
                 if (json.wind.speed) {
@@ -94,9 +94,9 @@ $(document).ready(function() {
                         addPiece(7);
                     } else if (json.wind.speed > 25) {
                         addPiece(8);
-                    };
+                    }
                     document.getElementById("container__wind-scale").innerHTML= newContent;
-                };
+                }
                 //Changing units.
                 var changer = true;
                 $(".container__units-button").click(function() {
@@ -110,11 +110,11 @@ $(document).ready(function() {
                         $(".container__pressure-degrees").html(json.main.pressure + ' hPa');
                         $(".container__wind-speed").html(json.wind.speed + ' m/s');
                         changer = true;
-                    };
+                    }
                 });
             });
         });
-    };
+    }
     //Footer buttons.
     $(".codepen").click(function() {
         window.open("https://codepen.io/Milthir/#");
