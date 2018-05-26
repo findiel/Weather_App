@@ -125,6 +125,6 @@ $(document).ready(function() {
     });
  
     $(".facebook").click(function() {
-        window.open("https://www.facebook.com/bartlomiej.tuchowski");
+        window.open("https://www.facebook.com/Fjollsfinn.dev/");
     });
 });
