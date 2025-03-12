@@ -8,5 +8,5 @@ User Story: You can see temperature, pressure and wind speed scale. <br />
 User Story: You can push a button to toggle between Fahrenheit and Celsius. <br />
 
 # LIVE
-https://fjollsfinn.github.io/Weather_App/index.html
+https://findiel.github.io/Weather_App/index.html
 
